@@ -1,0 +1,90 @@
+body{
+    background-color: #cac7c0;
+}
+
+.content{
+    font-family: sans-serif;
+    padding: 3em 0;
+    margin-left: 5em;
+}
+
+#drop-area{
+    border: 0.15em dashed #171616;
+    width: 70%;
+    height: 4em;
+    padding: 2em;
+    text-align: center;
+    background-color: #edebe9;
+}
+
+#gallery {
+    padding: 0.2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+#gallery img {
+    width: 10em;
+    height: 10em;
+    margin: 1em;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.column > * {
+    margin: 0.5em 0;
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.row > * {
+    margin: 0 2em;
+}
+
+.input-text > * {
+    margin: 0.1em;
+}
+
+.form-area{
+    flex: 4;
+}
+
+.drag-and-drop-area{
+    flex: 6;
+}
+
+input[type="text"],
+input[type="number"]{
+    width: 90%;
+    height: 3em;
+    padding-left: 1em;
+    border-radius: 0.3em;
+    border: 0;
+    background-color: #edebe9;
+    font-size: 1.05em;
+}
+
+input[type="submit"]{
+    width: 95%;
+    height: 3em;
+    border-radius: 0.3em;
+    background-color: #f0a500;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+input[type="submit"]:hover{
+    background-color: #d8b049;
+}
