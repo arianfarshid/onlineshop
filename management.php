@@ -61,6 +61,9 @@ class Management extends Page
                     Ziehe deine Bilder hier hinein <br> AN: {$lastArtikelNummer}
                 </section>
                 <section id="gallery"></section>
+                <form action="management.php" method="POST" accept-charset="UTF-8">
+                    <input type="submit" id="finish" name="finish" value="Fertig">
+                </form>
             DRAGANDDROP;
         }
 
@@ -74,6 +77,10 @@ class Management extends Page
     protected function processReceivedData():void
     {
         parent::processReceivedData();
+        if(isset($_POST['finish'])){
+            unset($_POST['send']);
+        }
+
         if (isset($_FILES['file'])) {
             $uploadDir = 'assets/taschen/';
             if (!is_dir($uploadDir)) {

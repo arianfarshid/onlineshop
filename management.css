@@ -9,7 +9,7 @@ body{
 
 #drop-area{
     border: 0.15em dashed #171616;
-    width: 70%;
+    width: 87%;
     height: 4em;
     padding: 2em;
     text-align: center;
@@ -33,6 +33,8 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-content: center;
+    text-align: center;
     width: 100%;
 }
 
@@ -112,3 +114,8 @@ input[type="submit"]{
 input[type="submit"]:hover{
     background-color: #d8b049;
 }
+
+#finish {
+    width: 50%;
+}
+
