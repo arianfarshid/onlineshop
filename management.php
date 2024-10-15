@@ -37,29 +37,35 @@ class Management extends Page
         echo <<< FORM
             <section class="row">
                 <form class="column form-area" action="management.php" method="POST" accept-charset="UTF-8">
-                    <section class="input-text">
-                        <p>Bezeichnung des Produkts</p>
-                        <input type="text" name="bezeichnung" placeholder="Bezeichnung..." required>
-                    </section> 
-                    <section class="input-text">
-                        <p>Artikelnummer des Produkts</p>
-                        <input type="text" name="artikelnummer" placeholder="Artikelnummer..." required>
+                    <section class="input-container">
+                        <input type="text" name="bezeichnung" placeholder="" required>
+                        <span class="placeholder">Bezeichnung des Produkts</span>
                     </section>
-                    <section class="input-text">
-                        <p>Preis in Euro</p>
-                        <input type="number" name="preis" placeholder="Preis..." min="0" step="0.01" required>
+                    <section class="input-container">
+                        <input type="text" name="artikelnummer" placeholder="" required>
+                        <span class="placeholder">Artikelnummer des Produkts</span>
                     </section>
-                    <input type="submit" onclick="addPicture()" name="send" id="send" value="Artikel hinzufügen">
+                    <section class="input-container">
+                        <input type="number" name="preis" placeholder="" min="0" step="0.01" required>
+                        <span class="placeholder">Preis des Produkts in Euro</span>
+                    </section>
+                    <input type="submit" name="send" id="send" value="Artikel hinzufügen">
                 </form>
                 <section class="column drag-and-drop-area">
-                    <p id="addPics">Hier können Sie nun die Bilder hinzufügen</p>
-                    <section id="drop-area">
-                        Ziehe deine Bilder hier hinein <br> AN: {$lastArtikelNummer}
-                    </section>
-                    <section id="gallery"></section>
-                </section>
-            </section>
         FORM;
+
+        if(isset($_POST['send'])){
+            echo <<< DRAGANDDROP
+                <p id="addPics">Hier können Sie nun die Bilder hinzufügen</p>
+                <section id="drop-area">
+                    Ziehe deine Bilder hier hinein <br> AN: {$lastArtikelNummer}
+                </section>
+                <section id="gallery"></section>
+            DRAGANDDROP;
+        }
+
+        echo "</section>\n";
+        echo "</section>\n";
         echo "</section>\n";
         echo "<section id='footer-container'></section>";
         $this->generatePageFooter();
